@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oranienbaum&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oranienbaum&family=Oswald:wght@500&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Playfair Display SC", serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.37vh 1.719vw;
+}
+
+.home {
+    background: url(./asstes/images/1.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+}
+
+nav>span {
+    font-size: 2.5vw;
+    font-weight: bold;
+
+}
+
+.nav_links {
+    font-size: 1.25vw;
+    display: flex;
+    align-items: center;
+    gap: 2.083vw;
+    padding-right: 0.521vw;
+}
+
+.nav_links a {
+    text-decoration: none;
+    color: white;
+}
+
+.slogan {
+    font-size: 7.5vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 92%;
+    text-decoration: underline;
+    text-decoration-thickness: 0.417vw;
+    text-underline-offset: 0.833vw;
+}
+
+.slogan-2 {
+    background-color: #cbcbcb;
+    font-size: 3.75vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.gallery {
+    padding-top: 1.563vw;
+    background-color: #c4c4c4;
+}
+
+.para {
+
+    font-size: 1.875vw;
+    text-align: center;
+
+}
+
+.our_story {
+    margin-top: 1.563vw;
+    margin-bottom: 2.604vw;
+    text-align: center;
+}
+
+.our_story button {
+    width: 18.281vw;
+    border: none;
+    height: 3.906vw;
+    background-color: #3B3131;
+    font-size: 2.083vw;
+    color: #FFFFFF;
+    border-radius: 0.625vw;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.gallery-grid img {
+    width: 26.042vw;
+    height: 24.323vw;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero {
+    background-color: #C4C4C4;
+}
+
+.menu h1 {
+    font-size: 5vw;
+    font-family: "Oranienbaum", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    padding-top: 1.563vw;
+}
+
+.selection {
+    text-align: center;
+}
+
+.selection a,
+.selection span {
+    font-family: "Overlock", sans-serif;
+    font-size: 3.125vw;
+    padding: 0 0.625vw;
+    color: black;
+    text-decoration: none;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr .1fr 1fr;
+    width: 85vw;
+    margin: 2.604vw auto;
+    gap: 4.167vw;
+}
+
+.menu-items-item-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2.5vw;
+}
+
+.menu-items-item-desc {
+    margin-top: 2.604vw;
+    font-family: "Oranienbaum", serif;
+    font-size: 1.875vw;
+}
+
+.menu-items-item-name {
+    font-family: "Oranienbaum", serif;
+}
+
+.menu-items-item-price {
+    color: #9E1E1E;
+    font-family: "Oranienbaum", serif;
+}
+
+.menu-items-separation hr {
+    background-color: black;
+    height: 0.26vw;
+    width: 100%;
+    border: none;
+
+}
+
+.menu-items-separation {
+    display: flex;
+    align-items: center;
+}
+
+.reviews-section img {
+    height: 69.629vh;
+    width: 44.1145vw;
+    object-position: center;
+    object-fit: cover;
+}
+
+.reviews-section {
+    text-align: end;
+    margin: 2.604vw 5.208vw;
+    position: relative;
+
+}
+
+.reviews-section-container {
+    background-color: white;
+    height: 21.71vw;
+    width: 34.21875vw;
+    position: absolute;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.reviews-section-container-1 {
+    z-index: 3;
+    top: 6.894vw;
+    left: 15.1041vw;
+}
+
+.reviews-section-container-2 {
+    z-index: 4;
+    top: 5.254vw;
+    left: 13.020vw;
+}
+
+.reviews-section-container-2-desc {
+    font-size: 1.5625vw;
+    padding: 0.827vw 0.9375vw;
+    text-align: center;
+}
+
+.reviews-section-container-2-name {
+    font-size: 1.875vw;
+    font-weight: bold;
+    text-align: end;
+    padding-top: 0.735vw;
+    padding-right: 0.625vw;
+}
+
+.reservation {
+    background: url(./asstes/images/2.png);
+    background-size: cover;
+    background-position: center;
+    font-family: "Oswald", sans-serif;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: white;
+    height: 26.667vw;
+    font-family: "Roboto", sans-serif;
+    align-items: center;
+    justify-content: center;
+    gap: 2.604vw;
+}
+
+.reservation h1 {
+    font-size: 5vw;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+
+
+
+}
+
+.reservation p {
+    font-size: 1.875vw;
+    font-family: "Roboto", sans-serif;
+}
+
+.reserv-btn {
+    font-size: 2.083vw;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    width: 22.24vw;
+    height: 4.688vw;
+    border-radius: 2.292vw;
+    background-color: #383737;
+    border: none;
+    cursor: pointer;
+
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2.083vw 0;
+    text-align: center;
+}
+
+.footer-contact-head {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 1.875vw;
+}
+
+.footer-contact-desc {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.25vw;
+}
+
+.go-up {
+    position: fixed;
+    bottom: 2.344vw;
+    right: 2.344vw;
+    z-index: 10;
+    height: 2.292vw;
+    background-color: white;
+    padding: 0.521vw;
+    border-radius: 0.781vw;
+    cursor: pointer;
+}
+
+.go-up.show {
+    display: block;
+    opacity: 1;
+}
+
+.go-up.hide {
+    opacity: 0;
+}
+
+.go-up:active {
+    transform: scale(0.9);
+    transition: transform 0.1s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media (max-width: 1330px) {
+    .gallery-grid img {
+        width: 26.042vw;
+        height: 15.185vh;
+
+    }
+}
+
+@media (max-width: 992px) {
+    .reviews-section img {
+        height: 48.69vw;
+        width: 85.1145vw;
+    }
+
+    .reviews-section {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 802px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .menu-items {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr .1fr 1fr .1fr 1fr .1fr;
+    }
+
+    .hidden2 {
+        display: none;
+    }
+
+    .hidden {
+        display: flex;
+    }
+
+}
+
+@media (max-width: 770px) {
+    nav>span {
+        font-size: 3.5vw;
+    }
+
+    .nav_links {
+        font-size: 2.25vw;
+        gap: 5.083vw;
+    }
+
+    .nav_links a img {
+        height: 4.25vw;
+    }
+
+    nav {
+        gap: 0.625vw;
+    }
+
+    .home {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 320px) {
+    .home {
+        height: 50vh;
+    }
+
+}
+
+@media (max-width: 156px) {
+
+    .reviews-section-container-2-desc {
+        font-size: 1.4825vw;
+    }
+}
