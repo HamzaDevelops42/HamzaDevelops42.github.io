@@ -71,7 +71,7 @@ nav>span {
     justify-content: center;
     align-items: center;
     text-align: center;
-    text-shadow: 8px 3px 8px rgba(1, 1, 1, 1);
+    text-shadow: 6px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .gallery {
