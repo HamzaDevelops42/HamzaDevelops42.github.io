@@ -12,6 +12,10 @@
     font-family: "Playfair Display SC", serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -28,22 +32,24 @@ nav {
 }
 
 nav>span {
-    font-size: 2.5vw;
+    font-size: 3vw;
     font-weight: bold;
+    text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.9)
 
 }
 
 .nav_links {
-    font-size: 1.25vw;
+    font-size: 1.55vw;
     display: flex;
     align-items: center;
-    gap: 2.083vw;
+    gap: 4.083vw;
     padding-right: 0.521vw;
 }
 
 .nav_links a {
     text-decoration: none;
     color: white;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.9);
 }
 
 .slogan {
@@ -55,6 +61,7 @@ nav>span {
     text-decoration: underline;
     text-decoration-thickness: 0.417vw;
     text-underline-offset: 0.833vw;
+    text-shadow: 10px 6px 6px rgba(1, 1, 1, 1);
 }
 
 .slogan-2 {
@@ -64,6 +71,7 @@ nav>span {
     justify-content: center;
     align-items: center;
     text-align: center;
+    text-shadow: 8px 3px 8px rgba(1, 1, 1, 1);
 }
 
 .gallery {
@@ -75,15 +83,16 @@ nav>span {
 
     font-size: 1.875vw;
     text-align: center;
+    text-shadow: 5px 1px 8px rgba(0, 0, 0, 0.7);
 
 }
 
-.our_story {
+/* .our_story {
     margin-top: 1.563vw;
     margin-bottom: 2.604vw;
     text-align: center;
-}
-
+} */
+/* 
 .our_story button {
     width: 18.281vw;
     border: none;
@@ -94,7 +103,7 @@ nav>span {
     border-radius: 0.625vw;
     font-family: "Oswald", sans-serif;
     font-weight: 500;
-}
+} */
 
 .gallery-grid {
     display: grid;
@@ -108,6 +117,16 @@ nav>span {
     object-fit: cover;
     object-position: center;
 }
+.gallery_heading{
+    font-size: 5.75vw;
+    margin: 3vw 0;
+    font-family: "Oranienbaum", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    
+    text-shadow: 3px 2px 6px rgba(0, 0, 0, 0.8);
+}
 
 .hero {
     background-color: #C4C4C4;
@@ -120,6 +139,7 @@ nav>span {
     font-style: normal;
     text-align: center;
     padding-top: 1.563vw;
+    text-shadow: 3px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .selection {
@@ -133,6 +153,7 @@ nav>span {
     padding: 0 0.625vw;
     color: black;
     text-decoration: none;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .menu-items {
@@ -149,6 +170,7 @@ nav>span {
     align-items: center;
     justify-content: space-between;
     font-size: 2.5vw;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .menu-items-item-desc {
@@ -181,6 +203,7 @@ nav>span {
 
 .reviews-section img {
     height: 69.629vh;
+    border-radius: 4vw;
     width: 44.1145vw;
     object-position: center;
     object-fit: cover;
@@ -217,6 +240,7 @@ nav>span {
     font-size: 1.5625vw;
     padding: 0.827vw 0.9375vw;
     text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .reviews-section-container-2-name {
@@ -225,6 +249,7 @@ nav>span {
     text-align: end;
     padding-top: 0.735vw;
     padding-right: 0.625vw;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
 .reservation {
@@ -243,6 +268,32 @@ nav>span {
     gap: 2.604vw;
 }
 
+.reservation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(5px);
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.reservation h1,
+.reservation p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.reservation h1,
+.reservation p,
+.reserv-btn {
+    position: relative;
+    z-index: 2;
+    
+}
+
 .reservation h1 {
     font-size: 5vw;
     font-family: "Roboto", sans-serif;
@@ -254,6 +305,7 @@ nav>span {
 
 .reservation p {
     font-size: 1.875vw;
+    text-align: center;
     font-family: "Roboto", sans-serif;
 }
 
@@ -267,6 +319,8 @@ nav>span {
     background-color: #383737;
     border: none;
     cursor: pointer;
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 1px 5px rgba(255, 255, 255, 0.8);
 
 }
 
@@ -299,6 +353,7 @@ footer {
     padding: 0.521vw;
     border-radius: 0.781vw;
     cursor: pointer;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
 }
 
 .go-up.show {
@@ -369,12 +424,15 @@ footer {
 }
 
 @media (max-width: 770px) {
+    .home{
+        height: 71vh;
+    }
     nav>span {
-        font-size: 3.5vw;
+        font-size: 7.5vw;
     }
 
     .nav_links {
-        font-size: 2.25vw;
+        font-size: 4.25vw;
         gap: 5.083vw;
     }
 
@@ -383,11 +441,179 @@ footer {
     }
 
     nav {
-        gap: 0.625vw;
+        gap: 2.625vw;
     }
 
     .home {
         height: 60vh;
+    }
+
+    .slogan {
+        flex-direction: column;
+        gap: 1.5vw;
+        justify-content: center;
+        align-items: normal;
+        padding: 0 12vw;
+    }
+
+    .slogan span:first-child {
+        text-align: start;
+    }
+
+    .slogan span:nth-child(2) {
+        text-align: center;
+    }
+
+    .slogan span:nth-child(3) {
+        text-align: end;
+    }
+
+    .slogan-2 {
+        padding: 5vw 0;
+        font-size: 10vw;
+    }
+
+    .para {
+        font-size: 4vw;
+        padding: 4vw 0;
+    }
+
+    /* .our_story button {
+        width: 24.281vw;
+        height: 5.906vw;
+        font-size: 4.083vw;
+        border-radius: 1.625vw;
+    } */
+
+    .gallery-grid img {
+        width: 80.042vw;
+        height: 76.185vh;
+        border-radius: 25px;
+    }
+    .gallery_heading{
+        font-size: 13vw;
+        margin: 8vw 0;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 5vw;
+    }
+
+    .menu h1 {
+        padding-top: 4.563vw;
+        font-size: 12vw;
+    }
+
+    .selection {
+        padding: 3vw 0;
+    }
+
+    .selection a {
+        font-size: 5.125vw;
+    }
+
+    .menu-items-item-heading {
+        font-size: 4.5vw;
+    }
+
+    .menu-items-item-desc {
+        font-size: 3.875vw;
+    }
+
+    .menu-items {
+        margin: 4.604vw auto;
+    }
+
+    .reviews-section img {
+        height: 70.69vw;
+        width: 90.1145vw;
+    }
+
+    .reviews-section-container {
+        height: 35.71vw;
+        width: 59.21875vw;
+    }
+
+    .reviews-section-container-1 {
+        top: 23%;
+        left: 18%;
+
+    }
+
+    .reviews-section-container-2 {
+
+        top: 19%;
+        left: 14%;
+    }
+
+    .reviews-section-container-2-desc {
+        font-size: 2.7125vw;
+
+    }
+
+    .reviews-section-container-2-name {
+        font-size: 2.875vw;
+    }
+
+    .reservation {
+        height: 63.667vw;
+        gap: 7.396vw;
+
+    }
+
+    .reservation h1 {
+        font-size: 10vw;
+    }
+
+    .reservation p {
+        font-size: 4.5vw;
+    }
+
+    .reserv-btn {
+        width: 33.24vw;
+        height: 6.688vw;
+        border-radius: 2.292vw;
+        font-size: 3.083vw;
+    }
+
+    .footer-contact-head {
+        font-size: 4vw;
+    }
+
+    .footer-contact-desc {
+        font-size: 2.5vw;
+    }
+
+    .go-up {
+        bottom: 8.344vw;
+        right: 5.344vw;
+        height: 6.292vw;
+    }
+
+    .go-up.show {
+        opacity: 0;
+    }
+}
+@media (min-width: 600px) and (max-width: 770px) {
+    .home{
+        height: 100vh;
+    }
+}
+@media (min-width: 470px) and (max-width: 600px) {
+    .home{
+        height: 80vh;
+    }
+}
+
+
+
+@media (max-width: 425px) {
+    .go-up.show {
+        opacity: 0;
+    }
+    .gallery-grid img {
+        height: 47.185vh;
     }
 }
 
@@ -395,8 +621,22 @@ footer {
     .home {
         height: 50vh;
     }
-
+    .gallery-grid img {
+        height: 40.185vh;
+        width: 84.042vw;
+    }
+    
 }
+@media (max-width: 420px) {
+    
+    .slogan{
+        font-size: 11vw;
+        
+    }
+}
+
+
+
 
 @media (max-width: 156px) {
 
