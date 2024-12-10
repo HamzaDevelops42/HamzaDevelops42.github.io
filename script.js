@@ -1,3 +1,9 @@
+AOS.init({
+    duration: 1000, // Animation duration in milliseconds
+    easing: 'ease-in-out', // Animation easing
+    once: true, // Whether animation should happen only once
+  });
+
 
 const goUpButton = document.querySelector('.go-up');
 
@@ -23,3 +29,4 @@ document.addEventListener('DOMContentLoaded', toggleGoUpButton);
 
 
 window.addEventListener('scroll', toggleGoUpButton);
+
