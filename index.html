@@ -3,139 +3,292 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Protfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Hamza Bin Asif</title>
+
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
 </head>
 
 <body>
-    <div class="container">
-        <nav>
-            <div>Hamza Bin Asif</div>
-            <div class="nav_flex">
-                <a href="./index.html">Home</a>
-                <span>/</span>
-                <a href="#projects">Projects</a>
-                <span>/</span>
-                <a href="./Articles.html">Articles</a>
-                <span>/</span>
-                <a href="./Contact.html">Contact</a>
+
+    <!-- header design -->
+    <header class="header" data-aos="fade-down" data-aos-duration="700">
+        <a href="#" class="logo">Hamza</a>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="bx bx-moon" id="darkMode-icon"></div>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <section class="home" id="home" >
+        <div class="home-content" >
+
+            <h3 data-aos="fade-right" data-aos-duration="300">Hello, I am</h3>
+            <h1 data-aos="fade-right" data-aos-duration="400">Hamza Bin Asif</h1>
+            <p data-aos="fade-right" data-aos-duration="500">A web developer with a passion for building dynamic and user-friendly websites.</p>
+
+            <div class="social-media" data-aos="fade-right" data-aos-duration="600">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+            </div>
+            <a href="#contact" class="btn" data-aos="fade-right" data-aos-duration="700">Contact Me</a>
+
+
+
+        </div>
+
+            <div class="slogan" >
+                <div class="slogan-header" data-aos="fade-left" data-aos-duration="400">CREATING</div>
+                <div class="sub-header" data-aos="fade-left" data-aos-duration="500">DELIGHTFUL</div>
+                <div class="description" data-aos="fade-left" data-aos-duration="600">experiences </div>
+                <div class="sub-description" data-aos="fade-left" data-aos-duration="700"><p>for your </p>business</div>
+
             </div>
 
-        </nav>
-        <main>
-            <section>
-                <div class="head">
-                    <h1>Frontend Developer</h1>
-                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-                </div>
-            </section>
-            <hr class="main_hr">
-            <section>
-                <div class="hero">
-                    <div id="projects" class="first">
-                        <h5 class="Caveat">Projects</h5>
-                        <span>Html only protfolio</span>
-                        <hr class="small_hr">
-                        <span>Calculator</span>
-                        <hr class="small_hr">
-                        <span>Quiz App</span>
-                        <hr class="small_hr">
-                        <span>Countdown Timer</span>
-                        <hr class="small_hr">
-                        <span>Product Upcoming Page</span>
-                    </div>
-                    <hr class="hr">
-                    <div class="second">
-                        <div>
-                            <h5 class="Caveat">Work Experience</h5>
-                            <span>Solved All Frontend Projects</span>
-                            <a href="">Visit my profile</a>
-                        </div>
-                        <hr class="small_hr">
-                        <div>
-                            <h5 class="Caveat">OpenSource Work</h5>
-                            <span>Contributed to 50 opensource projects.Made my own projects with 200 Github
-                                Stars</span>
-                            <a href="https://github.com/HamzaDevelops42">View my Github Profile</a>
-                        </div>
-                    </div>
-                    <hr class="hr">
-                    <div class="third ">
-
-                        <h5 class="Caveat">Education</h5>
-                        <div>Graduated with 3.76 out of 4 CGPA.Won Acme Hackathon.Organized 30 sessions.</div>
-                        <div>
-                            Courses I took:
-                        </div>
-                        <div>
-                            -Object Oriented Programming
-                            <br>
-                            _Data Structures and Algorithms
-                            <br>
-                            _Web Engineering
-                            <br>
-                            _Artificial Intelligence
-                            <br>
-                            _Human Computer Interaction
-                            <br>
-                            _Computer Graphics
-                            <br>
-                            _Database Management Systems
-                            <br>
-                            _Distributed Database Systems
-                            <br>
-                            _Discreet Mathematics
-                        </div>
-                    </div>
-                </div>
-                <hr class="main_hr">
-            </section>
-            <section class="reviews">
-                <h5 class="Caveat">Reviews From my Teachers</h5>
-                <div class="cards">
-                    <div class="card">
-                        <p>Hamza was a brilliant student;always stood out with his assignments
-                            <br><br>
-                            <span class="grey">
-                                Jane Doe
-                                <br>
-                                Assistant Professor
-                            </span>
-                        </p>
-                    </div>
-                    <div class="card">
-                        <p>Hamza was a brilliant student;always stood out with his assignments
-                            <br><br>
-                            <span class="grey">
-                                Jane Doe
-                                <br>
-                                Assistant Professor
-                            </span>
-                        </p>
-                    </div>
-                    <div class="card">
-                        <p>Hamza was a brilliant student;always stood out with his assignments
-                            <br><br>
-                            <span class="grey">
-                                Jane Doe
-                                <br>
-                                Assistant Professor
-                            </span>
-                        </p>
-                    </div>
-                </div>
-            </section>
-            <footer>
-                <div class="footer Caveat">
-                   &#169; all rights reserved 2024
-                </div>
-            </footer>
 
 
-        </main>
+        <!-- <div class="profession-container">
+            <div class="profession-box">
+                <div class="profession" style="--i:0;">
+                    <i class='bx bx-code-alt'></i>
+                    <h3>Web Developer</h3>
+                </div>
+                <div class="profession" style="--i:1;">
+                    <i class='bx bx-camera'></i>
+                    <h3>Photographer</h3>
+                </div>
+                <div class="profession" style="--i:2;">
+                    <i class='bx bx-palette'></i>
+                    <h3>Web Designer</h3>
+                </div>
+                <div class="profession" style="--i:3;">
+                    <i class='bx bx-video-recording'></i>
+                    <h3>Videographer</h3>
+                </div>
+
+                <div class="circle"></div>
+
+                <div class="overlay"></div>
+            </div>
+        </div> -->
+        <!-- <div class="home-img">
+            <img src="images/home.png" alt="">
+        </div> -->
+    </section>
+
+    <!-- about section design -->
+
+    <section class="about" id="about">
+        <!-- <div class="about-img">
+            <img src="images/about.png" alt="">
+        </div> -->
+
+        <div class="about-content">
+            <h2 class="heading" data-aos="fade-down" data-aos-duration="700">About <span>Me</span></h2>
+            <h3 data-aos="fade-left" data-aos-duration="700">Hi, I'm Here to help your next project!</h3>
+            <p data-aos="fade-right" data-aos-duration="700">I'm Hamza Bin Asif, a web developer with a passion for building dynamic and user-friendly websites. I work with a variety of technologies to create seamless digital experiences that not only look great but also perform well. Whether it's developing a custom website, optimizing user interfaces, or implementing robust functionality, I'm dedicated to bringing your ideas to life and ensuring your project succeeds. Let's work together and make your vision a reality!</p>
+<!--             <a href="#" class="btn" data-aos="fade-up" data-aos-duration="700">Read More</a> -->
+        </div>
+    </section>
+
+    <!-- services section design -->
+    <section class="services" id="services">
+        <h2 class="heading" data-aos="fade-down" data-aos-duration="700">My <span>Services</span></h2>
+        <div class="services-container" >
+            <div class="services-box" data-aos="fade-right" data-aos-duration="700">
+                <div class="bx bx-palette i"></div>
+                <h3>Responsive Web Design</h3>
+                <p>Designing visually appealing, user-friendly websites that adapt seamlessly to any screen size using HTML, CSS, and JavaScript.</p>
+                <!-- <a href="#" class="btn">Read More</a> -->
+            </div>
+            <div class="services-box" data-aos="fade-up" data-aos-duration="700">
+                <div class="bx bx-wrench i"></div>
+                <h3>Custom Web Development</h3>
+                <p>Building tailored websites with dynamic features and interactive elements to meet unique client requirements and business goals.</p>
+                <!-- <a href="#" class="btn">Read More</a> -->
+            </div>
+            <div class="services-box" data-aos="fade-left" data-aos-duration="700">
+                <div class="bx bxs-bolt i"></div>
+                <h3>Website Optimization</h3>
+                <p>Improving website speed, cross-browser compatibility, and accessibility for enhanced user satisfaction and search engine rankings.</p>
+                <!-- <a href="#" class="btn">Read More</a> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- portfolio section design -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading" data-aos="fade-down" data-aos-duration="700">Latest <span>Project</span></h2>
+
+        <div class="portfolio-container" data-aos="fade-up" data-aos-duration="700">
+            <div class="portfolio-box">
+                <img src="./images/portfolio1.jpg" alt="">
+
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, quia quis.</p>
+                    <a href="#"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="./images/portfolio2.jpg" alt="">
+
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, quia quis.</p>
+                    <a href="#"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="./images/portfolio3.jpg" alt="">
+
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, quia quis.</p>
+                    <a href="#"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="./images/portfolio4.jpg" alt="">
+
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, quia quis.</p>
+                    <a href="#"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="./images/portfolio5.jpg" alt="">
+
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, quia quis.</p>
+                    <a href="#"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="./images/portfolio6.jpg" alt="">
+
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, quia quis.</p>
+                    <a href="#"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- testimonial design -->
+    <div class="testimonial-container">
+        <div class="heading" data-aos="fade-down" data-aos-duration="700">Valuable <span>Testimonial</span></div>
+
+        <div class="testimonial-wrapper">
+            <div class="testimonial-box mySwiper">
+                <div class="testimonial-content swiper-wrapper">
+                    <div class="testimonial-slide swiper-slide">
+                        <img src="images/testimonial1.jpg" alt="" data-aos="fade-right" data-aos-duration="700"> 
+                        <h3 data-aos="fade-right" data-aos-duration="700">Ethan Williams</h3 >
+                        <p data-aos="fade-left" data-aos-duration="700">Working with Hamza was an excellent experience! He delivered a stunning, responsive website that perfectly captured my vision and exceeded all expectations. His attention to detail and ability to create interactive features were remarkable. I appreciated his professionalism and timely communication throughout the project. I highly recommend Hamza for anyone looking for a skilled and reliable web developer!</p>
+                    </div>
+
+                    <div class="testimonial-slide swiper-slide">
+                        <img src="images/testimonial2.jpg" alt="">
+                        <h3>Anna Smith</h3>
+                        <p>Hamza's expertise in web development truly stands out. He designed a highly functional and visually appealing website for my business, paying close attention to every detail I wanted. He ensured the site was fast, user-friendly, and accessible across all devices. His dedication to delivering quality work ahead of schedule impressed me. I’d gladly work with him again!</p>
+                    </div>
+
+                    <div class="testimonial-slide swiper-slide">
+                        <img src="images/testimonial3.jpg" alt="">
+                        <h3>Matthew Johnson</h3>
+                        <p>I approached Hamza for a website, and he delivered beyond my expectations! He took my ideas and turned them into a professional, polished website. The design is seamless, and the performance is excellent. Hamza’s communication and commitment to meeting deadlines were outstanding. I’m thrilled with the result and wouldn’t hesitate to recommend his services to others!</p>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
     </div>
 
+
+    <!-- contact section design -->
+    <section class="contact" id="contact">
+        <h2 class="heading" data-aos="fade-down" data-aos-duration="700">Contact <span>Me!</span></h2>
+
+
+        <form action="https://api.web3forms.com/submit" method="POST" id="my-web3form">
+            <div class="input-box">
+                <input type="text" name="full_name" placeholder="Full Name" data-aos="fade-right" data-aos-duration="700">
+                <input type="email" name="email" placeholder="Email Address" data-aos="fade-left" data-aos-duration="700">
+            </div>
+            <div class="input-box">
+                <input type="number" name="mobile_number" placeholder="Mobile Number" data-aos="fade-right" data-aos-duration="700">
+                <input type="text" name="subject" placeholder="Email Subject" data-aos="fade-left" data-aos-duration="700">
+            </div>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" data-aos="fade-up" data-aos-duration="700"></textarea>
+            <input type="submit" value="Send Message" class="btn" data-aos="fade-up" data-aos-duration="700">
+            
+            <!-- Web3 Form API Key -->
+            <input type="hidden" name="access_key" value="b866ad75-2517-4595-b908-a3060baa200f">
+        </form>
+    </section>
+
+
+
+    <!-- footer design -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2025 by Hamza | All Rights Reserved</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+        </div>
+    </footer>
+
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.web3forms.com/embed.js"></script>
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- custom js -->
+    <script src="js/script.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>
