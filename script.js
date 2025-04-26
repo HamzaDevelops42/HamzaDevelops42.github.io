@@ -1,6 +1,46 @@
 let currentsong = new Audio()
 let songs
 let songscover
+let songs1 = [
+    {
+        "file": "Afusic - Pal Pal (Official Music Video) Prod. @AliSoomroMusic.mp3",
+        "cover": "Afusic - Pal Pal (Official Music Video) Prod. @AliSoomroMusic.jpeg"
+    },
+    {
+        "file": "Alexander Rybak - Fairy tale (Instrumental)  slowed  reverb.mp3",
+        "cover": "defaultcover.png"
+    },
+    {
+        "file": "Bayaan  Hasan Raheem  Rovalio - Maand (Lyric Video).mp3",
+        "cover": "defaultcover.png"
+    },
+    {
+        "file": "Bayaan - Nahin Milta (Official Video).mp3",
+        "cover": "Bayaan - Nahin Milta (Official Video).jpeg"
+    },
+    {
+        "file": "Bella Ciao (Slow Version) - La Casa De Papel  Money Heist Season 4.mp3",
+        "cover": "defaultcover.png"
+    },
+    {
+        "file": "Dreaming Piano - Bella Cia piano cover.mp3",
+        "cover": "defaultcover.png"
+    },
+    {
+        "file": "Ludovico Einaudi - Experience (Live At Fabric, London2013).mp3",
+        "cover": "defaultcover.png"
+    },
+    {
+        "file": "Maanu - Jhol (Lyrics) ft. Annural Khalid.mp3",
+        "cover": "Maanu - Jhol (Lyrics) ft. Annural Khalid.jpg"
+    },
+    {
+        "file": "RAY CHEN - Vivaldi  Winter (L'inverno) I. Allegro non molto Four Seasons.mp3",
+        "cover": "defaultcover.png"
+    }
+]
+let defaultcover = "defaultcover.png"
+
 
 function secondsToMinutesSeconds(seconds) {
     if (isNaN(seconds) || seconds < 0) {
@@ -29,21 +69,23 @@ async function getsongs() {
     });
     return songs
 }
-async function getcover() {
-    let a = await fetch(document.location.origin + '/public/songs')
-    let response = await a.text()
-    let div = document.createElement("div")
-    div.innerHTML = response
-    let as = Array.from(div.getElementsByTagName("a"))
-    let cover = []
-    as.forEach(a => {
-        if (a.href.endsWith(".jpeg") || a.href.endsWith(".jpg") || a.href.endsWith(".png") || a.href.endsWith(".webp")) {
-            cover.push(a.href)
-        }
-    });
-    return cover;
-}
-getcover()
+// async function getcover() {
+//     let a = await fetch(document.location.origin + '/public/songs')
+//     let response = await a.text()
+//     let div = document.createElement("div")
+//     div.innerHTML = response
+//     let as = Array.from(div.getElementsByTagName("a"))
+//     let cover = []
+//     as.forEach(a => {
+//         if (a.href.endsWith(".jpeg") || a.href.endsWith(".jpg") || a.href.endsWith(".png") || a.href.endsWith(".webp")) {
+//             cover.push(a.href)
+//         }
+//     });
+//     return cover;
+// }
+// getcover()
+
+
 function playMusic(track, songname, paused = false) {
 
     currentsong.src = "/public/songs/" + track
@@ -63,9 +105,11 @@ function playMusic(track, songname, paused = false) {
 }
 
 (async function main() {
-    songs = await getsongs()
-    songs.forEach(song => {
-        let [artistname, songname] = song.split("/public/songs/")[1].replaceAll("%20", " ").replace(".mp3", "").split("-")
+    // songs = await getsongs()
+    songs1.forEach(song => {
+
+        let [artistname, songname] = song.file.split("-")
+        song.file
         let div = document.createElement("div")
         div.classList.add("songdiv")
         div.innerHTML = `
@@ -80,21 +124,23 @@ function playMusic(track, songname, paused = false) {
     document.dispatchEvent(new Event("librarysongsloaded"));
 
 
-    songscover = await getcover()
-    songs.forEach(song => {
-        songscover.forEach(element => {
-            let lastDotIndex = element.lastIndexOf(".");
-            let name = element.substring(0, lastDotIndex);
-            let extension = element.substring(lastDotIndex + 1);
+    // songscover = await getcover()
+    songs1.forEach(song => {
+        // songscover.forEach(element => {
+        //     let lastDotIndex = element.lastIndexOf(".");
+        //     let name = element.substring(0, lastDotIndex);
+        //     let extension = element.substring(lastDotIndex + 1);
 
-            if (song.split(".mp3")[0] == name) {
-                coverimagesrc = element
-            }
-        });
-        if (coverimagesrc == "") {
-            coverimagesrc = "/public/songs/defaultcover.png"
-        }
-        let [artistname, songname] = song.split("/public/songs/")[1].replaceAll("%20", " ").replace(".mp3", "").split("-")
+        //     if (song.split(".mp3")[0] == name) {
+        //         coverimagesrc = element
+        //     }
+        // });
+        // if (coverimagesrc == "") {
+        //     coverimagesrc = "/public/songs/defaultcover.png"
+        // }
+
+        coverimagesrc = "/public/songs/" + song.cover
+        let [artistname, songname] = song.file.split("-")
         let div = document.createElement("div")
         div.classList.add("card")
         div.innerHTML = `
@@ -116,7 +162,7 @@ function playMusic(track, songname, paused = false) {
     Array.from(document.querySelectorAll(".card-container .card")).forEach(div => {
         div.addEventListener("click", () => {
 
-            let track = div.querySelector(".card p").innerHTML.trim() + " - " + div.querySelector(".card h4").innerHTML.trim() + ".mp3"
+            let track = div.querySelector(".card p").innerHTML.trim() + " - " + div.querySelector(".card h4").innerHTML.trim()
             let songnamewithoutartistname = div.querySelector(".card h4").innerHTML.trim() + ".mp3"
             playMusic(track, songnamewithoutartistname)
 
@@ -130,7 +176,7 @@ function playMusic(track, songname, paused = false) {
     Array.from(document.querySelectorAll(".songslist .songdiv")).forEach(div => {
         div.addEventListener("click", () => {
 
-            let track = div.querySelector(".info").firstElementChild.nextElementSibling.innerHTML.trim() + " - " + div.querySelector(".info").firstElementChild.innerHTML.trim() + ".mp3"
+            let track = div.querySelector(".info").firstElementChild.nextElementSibling.innerHTML.trim() + " - " + div.querySelector(".info").firstElementChild.innerHTML.trim()
             let songnamewithoutartistname = div.querySelector(".info").firstElementChild.innerHTML.trim() + ".mp3"
             playMusic(track, songnamewithoutartistname)
 
@@ -145,9 +191,9 @@ function playMusic(track, songname, paused = false) {
     });
 
 
-    let track = document.querySelector(".info").firstElementChild.nextElementSibling.innerHTML.trim() + " - " + document.querySelector(".info").firstElementChild.innerHTML.trim() + ".mp3"
+    let track = document.querySelector(".info").firstElementChild.nextElementSibling.innerHTML.trim() + " - " + document.querySelector(".info").firstElementChild.innerHTML.trim()
 
-    let songnamewithoutartistname = document.querySelector(".info").firstElementChild.innerHTML.trim() + ".mp3"
+    let songnamewithoutartistname = document.querySelector(".info").firstElementChild.innerHTML.trim()
 
     playMusic(track, songnamewithoutartistname, true)
 
@@ -294,28 +340,37 @@ function playMusic(track, songname, paused = false) {
     // Adding previous song functionality 
 
     previous.addEventListener("click", () => {
-        let index = songs.indexOf(currentsong.src)
+
+        let index = songs1.findIndex(song => {
+            let currentFile = decodeURI(currentsong.src.split("/songs/")[1])
+            return currentFile === song.file;
+        });
 
         if (index == 0) {
-            index = songs.length
+            index = songs1.length
         }
 
-        let songname = songs[index - 1].split("/public/songs/")[1].split("-")[1].replaceAll("%20", " ")
-        playMusic(songs[index - 1].split("/public/songs/")[1], songname)
+        let songname = songs1[index - 1].file.split("-")[1]
+        playMusic(songs1[index - 1].file, songname)
     })
 
+    
     //adding next song funtionality 
+
     next.addEventListener("click", () => {
-        let index = songs.indexOf(currentsong.src)
+        let index = songs1.findIndex(song => {
+            let currentFile = decodeURI(currentsong.src.split("/songs/")[1])
+            return currentFile === song.file;
+        });
 
-
-        if (!((index + 1) < songs.length)) {
+        if (!((index + 1) < songs1.length)) {
             index = -1
         }
 
-        let songname = songs[index + 1].split("/public/songs/")[1].split("-")[1].replaceAll("%20", " ")
-        playMusic(songs[index + 1].split("/public/songs/")[1], songname)
+        let songname = songs1[index + 1].file.split("-")[1]
+        playMusic(songs1[index + 1].file, songname)
     })
+
 
 
     // Adding volume functionality
@@ -394,9 +449,9 @@ function playMusic(track, songname, paused = false) {
 
     mobileSearchBtn.addEventListener("click", (e) => {
         if (!isMobileView()) return;
-    
+
         e.stopPropagation(); // prevent closing instantly
-    
+
         // 🔁 Toggle active class
         if (mobileSearchPopup.classList.contains("active")) {
             mobileSearchPopup.classList.remove("active");
@@ -405,7 +460,7 @@ function playMusic(track, songname, paused = false) {
             mobileSearchInput.focus();
         }
     });
-    
+
     // Hide popup when clicking outside
     document.addEventListener("click", (e) => {
         if (!isMobileView()) return; // ✅ ignore on desktop
