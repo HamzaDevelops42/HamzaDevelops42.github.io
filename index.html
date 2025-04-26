@@ -4,116 +4,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify Clone</title>
+    <title>Personal Protfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <header>
+    <div class="container">
         <nav>
-            <img src="./images/logo.svg" alt="" class="logo invert">
-           
-            <div class="search">
-                <div class="home">
-                    <a href="./index.html">
-                        <img src="./images/home.svg" alt="" class="invert"></a>
-                </div>
-                <div class="search-bar">
-                    <img src="./images/search.svg" alt="" class="invert">
-                    <input type="text" name="SearchInput" id="SearchInput" placeholder="Search songs...">
-                </div>
+            <div>Hamza Bin Asif</div>
+            <div class="nav_flex">
+                <a href="./index.html">Home</a>
+                <span>/</span>
+                <a href="#projects">Projects</a>
+                <span>/</span>
+                <a href="./Articles.html">Articles</a>
+                <span>/</span>
+                <a href="./Contact.html">Contact</a>
             </div>
-            <div class="buttons">
-                <button class="signup">Sign up</button>
-                <button class="login">Log in</button>
-            </div>
-            
-            <div class="mobile-search-icon">
-                <img src="./images/search.svg" alt="Search" class="invert" id="mobileSearchBtn">
-            </div>
-            
 
         </nav>
-        <div class="mobile-search-popup" id="mobileSearchPopup">
-            <input type="text" id="MobileSearchInput" placeholder="Search songs..." />
-        </div>
-        
-        
-        
-    </header>
-    <main>
-        <section class="left">
-            <div class="left-heading">
-                <p>Your Library </p> <img id="leftCross" src="./images/cross.svg" class="invert" alt="">
-            </div>
-            <div class="songslist">
-
-            </div>
-            <section class="links">
-                <div>
-                    <a><span>Legal</span></a>
-                </div>
-                <div>
-                    <a><span>Safety & Privacy Center</span></a>
-                </div>
-                <div>
-                    <a><span>Privacy Policy</span></a>
-                </div>
-                <div>
-                    <a><span>Cookies</span></a>
-                </div>
-                <div>
-                    <a><span>About Ads</span></a>
-                </div>
-                <div>
-                    <a><span>Accessibility</span></a>
+        <main>
+            <section>
+                <div class="head">
+                    <h1>Frontend Developer</h1>
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
                 </div>
             </section>
-        </section>
-        <section class="right">
-            <div class="right-heading">Spotify Playlists</div>
-            <div class="card-container">
-
-
-
-            </div>
-
-            <span class="volume-box">
-
-                <div class="range">
-                    <span id="volumeRangeOutput">20</span>
-                    <input type="range" id="volumeInput" min="0" max="100" value="100">
-                </div>
-                <img src="./images/volume.svg" alt="" class="volume invert" id="volumeIcon">
-
-
-            </span>
-            <span class="repeat-box">
-                <img src="./images/repeat.svg" alt="" class="repeat invert" id="repeatIcon">
-            </span>
-
-            <div class="playbar">
-                <div class="controls">
-                    <div class="songinfo"></div>
-                    <div class="playbarcontrols">
-
-                        <img src="./images/previous.svg" id="previous" class="invert " alt="">
-                        <img src="./images/play2.svg" id="play" class="invert " alt="">
-                        <img src="./images/next.svg" id="next" class="invert " alt="">
+            <hr class="main_hr">
+            <section>
+                <div class="hero">
+                    <div id="projects" class="first">
+                        <h5 class="Caveat">Projects</h5>
+                        <span>Html only protfolio</span>
+                        <hr class="small_hr">
+                        <span>Calculator</span>
+                        <hr class="small_hr">
+                        <span>Quiz App</span>
+                        <hr class="small_hr">
+                        <span>Countdown Timer</span>
+                        <hr class="small_hr">
+                        <span>Product Upcoming Page</span>
                     </div>
-                    <div class="songtime"></div>
+                    <hr class="hr">
+                    <div class="second">
+                        <div>
+                            <h5 class="Caveat">Work Experience</h5>
+                            <span>Solved All Frontend Projects</span>
+                            <a href="">Visit my profile</a>
+                        </div>
+                        <hr class="small_hr">
+                        <div>
+                            <h5 class="Caveat">OpenSource Work</h5>
+                            <span>Contributed to 50 opensource projects.Made my own projects with 200 Github
+                                Stars</span>
+                            <a href="https://github.com/HamzaDevelops42">View my Github Profile</a>
+                        </div>
+                    </div>
+                    <hr class="hr">
+                    <div class="third ">
 
+                        <h5 class="Caveat">Education</h5>
+                        <div>Graduated with 3.76 out of 4 CGPA.Won Acme Hackathon.Organized 30 sessions.</div>
+                        <div>
+                            Courses I took:
+                        </div>
+                        <div>
+                            -Object Oriented Programming
+                            <br>
+                            _Data Structures and Algorithms
+                            <br>
+                            _Web Engineering
+                            <br>
+                            _Artificial Intelligence
+                            <br>
+                            _Human Computer Interaction
+                            <br>
+                            _Computer Graphics
+                            <br>
+                            _Database Management Systems
+                            <br>
+                            _Distributed Database Systems
+                            <br>
+                            _Discreet Mathematics
+                        </div>
+                    </div>
                 </div>
-                <div class="seekbar">
-                    <div class="circle"></div>
+                <hr class="main_hr">
+            </section>
+            <section class="reviews">
+                <h5 class="Caveat">Reviews From my Teachers</h5>
+                <div class="cards">
+                    <div class="card">
+                        <p>Hamza was a brilliant student;always stood out with his assignments
+                            <br><br>
+                            <span class="grey">
+                                Jane Doe
+                                <br>
+                                Assistant Professor
+                            </span>
+                        </p>
+                    </div>
+                    <div class="card">
+                        <p>Hamza was a brilliant student;always stood out with his assignments
+                            <br><br>
+                            <span class="grey">
+                                Jane Doe
+                                <br>
+                                Assistant Professor
+                            </span>
+                        </p>
+                    </div>
+                    <div class="card">
+                        <p>Hamza was a brilliant student;always stood out with his assignments
+                            <br><br>
+                            <span class="grey">
+                                Jane Doe
+                                <br>
+                                Assistant Professor
+                            </span>
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
+            <footer>
+                <div class="footer Caveat">
+                   &#169; all rights reserved 2024
+                </div>
+            </footer>
 
-    <script src="script.js"></script>
-    <script src="animations.js"></script>
+
+        </main>
+    </div>
+
 </body>
 
 </html>
